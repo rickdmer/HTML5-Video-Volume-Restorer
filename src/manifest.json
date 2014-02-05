@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "HTML5 Video Volume Restorer",
+	"description": "This extension remembers and restores your volume for video in Chrome.",
+	"version": "1.1",
+	"permissions": [
+		"storage"
+	],
+	"icons": {
+		"16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*", "file://*/*"],
+			"js": ["setvolume.js"]
+		}
+	]
+}
